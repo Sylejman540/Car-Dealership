@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="md:flex grid justify-evenly mt-8">
+        <div class="flex gap-20">
+            <!-- Adding Logo -->
+            <h1 class="text-3xl font-bold">
+              BOXCARS
+            </h1>
+              
+            <!-- Nav- Bar -->
+            <nav class="text-base font-medium">
+                <ul class="md:flex gap-10 md:mt-2 mt-8" id="menu">
+                    <li class="flex gap-3">
+                        <a href="#">Home</a>
+                        <img src="images/Arrow.png" alt="Arrow" class="h-1.5 mt-2 w-2">
+                    </li>
+
+                    <li class="flex gap-3">
+                        <a href="#">Listings</a>
+                        <img src="images/Arrow.png" alt="Arrow" class="h-1.5 mt-2 w-2">
+                    </li>
+
+                    <li class="flex gap-3">
+                        <a href="#">Blog</a>
+                        <img src="images/Arrow.png" alt="Arrow" class="h-1.5 mt-2 w-2">
+                    </li>
+
+                    <li class="flex gap-3">
+                        <a href="#">Pages</a>
+                        <img src="images/Arrow.png" alt="Arrow" class="h-1.5 mt-2 w-2">
+                    </li>
+
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <svg  class="md:hidden block w-8" id="burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+        </div>
+            <!-- Adding Sign-IN -->
+            <div class="md:flex hidden gap-4 mt-1">
+                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+                <h2 class="mt-1">Sign in</h2>
+            </div>
+            <!-- Submiting List(THE END OF THE NAV-BAR) -->
+                <h2 class="submit md:block hidden">Submit Listing</h2>
+    </div>
+
+
+    <!-- Banner -->
+
+    <div class="banner py-10 rounded mt-20 md:ml-20 md:mr-20">
+        <div>
+            <h3 class="text-white font-bold text-base text-center text-xl">The World's Largest Used Car Dealership</h3>
+
+            <h1 class="font-bold text-5xl text-white mt-20 text-center">Find Your Pefect Vehicle Online</h1>
+        </div>
+        <!-- Addin Arrows At The Banner Section -->
+        <div class="flex justify-between ml-5 mr-5 mt-30">
+            <img src="images/Left-arrow.png" alt="Left Arrow">
+
+            <img src="images/Right-arrow.png" alt="Right Arrow">
+        </div>
+    </div>
+
+    <!-- Select a Body Style -->
+    <div class="logos-container  mt-20 ">
+        <h2 class="text-3xl font-bold mb-10 text-center">Select a Body Style</h2>
+        <div class="overflow-x-auto md:flex md:justify-between">
+        <div class="logos-tracker flex flex-nowrap md:flex-wrap justify-between ml-5 mr-5 w-400 md:w-700 space-x-4">
+           <!-- Adding The Sedan Car -->
+        <div>
+           <img src="images/Sedan.png" alt="Sedan">
+           <h2 class="font-bold text-center text-xl">Sedan</h2>
+        </div>
+
+        <!-- Coupe -->
+        <div>
+            <img src="images/Coupe.png" alt="Sedan">
+            <h2 class="font-bold text-center text-xl">Coupe</h2>
+        </div>
+
+        <!-- SUV -->
+        <div>
+            <img src="images/SUV.png" alt="Sedan">
+            <h2 class="font-bold text-center text-xl">SUV</h2>
+        </div>
+
+        <!-- Truck -->
+        <div>
+            <img src="images/Truck.png" alt="Sedan">
+            <h2 class="font-bold text-center text-xl">Truck</h2>
+        </div>
+
+        <!-- Hatchback -->
+        <div>
+            <img src="images/Hatchback.png" alt="Sedan">
+            <h2 class="font-bold text-center text-xl">Hatchback</h2>
+        </div>
+
+        <!-- Minivan -->
+        <div>
+            <img src="images/MiniVan.png" alt="Sedan">
+            <h2 class="font-bold text-center text-xl">Minivan</h2>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+
+    <!-- Big ON What Matters -->
+    <div class="section-three mt-20 py-30">
+        <div class="md:flex grid justify-around md:ml-0 md:mr-0 ml-2 mr-2">
+            <h1 class="text-5xl font-bold text-black">We're BIG On What<br>Matters To You</h1>
+            
+        <div class="md:mt-0 mt-10 grid">
+            <div class="flex justify-around gap-20">
+                <div>
+                    <!-- SPECIAL FINANCING OFFERS -->
+                    <img src="images/Financing.png" alt="Financing">
+                    <h2 class="mt-3 font-bold text-xl mb-3">Special Financing Offers</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet consect.<br>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <div>
+                    <!-- Trusted Car Dealership -->
+                    <img src="images/Trusted.png" alt="Trusted">
+                    <h2 class="mt-3 font-bold text-xl mb-3">Trusted Car Dealership</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet consect.<br>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-around gap-20 mt-10">
+                <div>
+                    <!-- Transparent Pricing -->
+                    <img src="images/Pricing.png" alt="Pricing">
+                    <h2 class="mt-3 font-bold text-xl mb-3">Transparent Pricing</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet consect.<br>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <div>
+                    <!-- Car Service -->
+                    <img src="images/Services (3).png" alt="Trusted">
+                    <h2 class="mt-3 font-bold text-xl mb-3">Expert Car Service</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet consect.<br>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- The Most Searched Cars -->
+    <div class="mt-20  fade-section">
+        <h1 class="text-3xl font-bold text-center">The Most Searched Cars</h1>
+
+        <div class="flex justify-center gap-5 mt-5">
+           <h4 class="font-bold sedan">Sedan</h4>
+           <h4>SUV</h4>
+           <h4>Convertible</h4>
+           <h4>Hatchback</h4>
+        </div>
+        <div class="overflow-x-auto md:flex md:justify-around">
+        <div class="flex justify-around mt-10 gap-10 flex-nowrap space-x-4 md:w-470 w-375 md:ml-3 md:mr-3 ml-12 mr-12 ">
+            <div class="shadow-xl rounded">
+                <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  hidden md:block">
+                <img src="images/Range-Rover.png" alt="Range-Rover" class="rounded">
+            <div class="ml-4 mr-4 py-5">
+                <h3 class="mt-3 font-semibold">T-Cross - 2023</h3>
+                <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+                <hr>
+                <div class="flex justify-between mt-5">
+                    <div>
+                        <img src="images/Vector (14).png" alt="Miles">
+                        <span class="mt-2">15 Miles</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (15).png" alt="Miles">
+                        <span class="mt-2">Petrol</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (16).png" alt="Miles">
+                        <span class="mt-2">CVT</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex justify-around mt-5">
+                    <h2 class="text-lg font-bold">$15,000</h2>
+                    <span class="span text-lg">View Details</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Merceds(SECOND SECTION) -->
+            <div class="shadow-xl rounded">
+                <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  hidden md:block">
+                <button class="ab-btn absolute mt-4  hidden md:block">Great Price</button>
+                <img src="images/Mercedes.png" alt="Mercedes" class="rounded">
+            <div class="ml-4 mr-4 py-5">
+                <h3 class="mt-3 font-semibold">Mercedes - 2023</h3>
+                <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+                <hr>
+                <div class="flex justify-between mt-5">
+                    <div>
+                        <img src="images/Vector (14).png" alt="Miles">
+                        <span class="mt-2">15 Miles</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (15).png" alt="Miles">
+                        <span class="mt-2">Petrol</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (16).png" alt="Miles">
+                        <span class="mt-2">CVT</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex justify-around mt-5">
+                    <h2 class="text-lg font-bold">$80,000</h2>
+                    <span class="span text-lg">View Details</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Audi(THIRD SECTION) -->
+            <div class="shadow-xl rounded">
+                <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  hidden md:block">
+                <button class="ab1-btn absolute mt-4  hidden md:block">Sale</button>
+                <img src="images/Audi.png" alt="Audi" class="rounded">
+            <div class="ml-4 mr-4 py-5">
+                <h3 class="mt-3 font-semibold">Mercedes - 2023</h3>
+                <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+                <hr>
+                <div class="flex justify-between mt-5">
+                    <div>
+                        <img src="images/Vector (14).png" alt="Miles">
+                        <span class="mt-2">15 Miles</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (15).png" alt="Miles">
+                        <span class="mt-2">Petrol</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (16).png" alt="Miles">
+                        <span class="mt-2">CVT</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex justify-around mt-5">
+                    <h2 class="text-lg font-bold">$50,000</h2>
+                    <span class="span text-lg">View Details</span>
+                </div>
+            </div>
+            </div>    
+            <!-- Range(Fourth Section) -->
+            <div class="shadow-xl rounded">
+                <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  hidden md:block">
+                <button class="ab1-btn absolute mt-4 hidden md:block">Sale</button>
+                <img src="images/Range.png" alt="Audi" class="rounded">
+            <div class="ml-4 mr-4 py-5">
+                <h3 class="mt-3 font-semibold">Range-Rover - 2025</h3>
+                <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+                <hr>
+                <div class="flex justify-between mt-5">
+                    <div>
+                        <img src="images/Vector (14).png" alt="Miles">
+                        <span class="mt-2">15 Miles</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (15).png" alt="Miles">
+                        <span class="mt-2">Petrol</span>
+                    </div>
+
+                    <div>
+                        <img src="images/Vector (16).png" alt="Miles">
+                        <span class="mt-2">CVT</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex justify-around mt-5">
+                    <h2 class="text-lg font-bold">$200,000</h2>
+                    <span class="span text-lg">View Details</span>
+                </div>
+            </div>
+            </div>    
+        </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="flex justify-center gap-5 mt-15">
+            <img src="images/Left-arrow(2).png" alt="Left Arrow">
+            <img src="images/Right-arrow (2).png" alt="">
+        </div>
+    </div>
+
+    <!-- Are You Looking For A Car -->
+        <div class="md:flex md:justify-around grid mt-20">
+        <div class="left-side px-20 py-20 rounded">
+            <div class="md:flex grid justify-around gap-20">
+                <div>
+                    <h2 class="text-3xl font-bold mb-5">Are You Looking<br>For a Car?</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.<br>Lorem, ipsum.</p>
+                    <button class="car-btn mt-5">Get Started</button>
+                </div>
+                <img src="images/Eletric-Car.png" alt="Car" class="w-25 h-25 md:mt-20">
+            </div>
+        </div>
+
+        <div class="right-side px-20 py-20 rounded md:mt-0 mt-5">
+            <div class="md:flex md:justify-around grid gap-20">
+                <div>
+                    <h2 class="text-3xl font-bold mb-5">Do You Want to<br>Sell a Car?</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.<br>Lorem, ipsum.</p>
+                    <button class="car2-btn mt-5">Get Started</button>
+                </div>
+                <img src="images/Eletric-Car(2).png" alt="Car" class="w-25 h-25 md:mt-20">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Recommended Cars For You -->
+    <div class="mt-20 fade-section1">
+        <h1 class="text-3xl font-bold text-center">Recommended Cars For You</h1>
+        <div class="overflow-x-auto md:flex md:justify-around">
+            <div class="flex justify-around mt-10 gap-10  md:flex-wrap flex-nowrap space-x-4 w-380 md:ml-0 md:mr-0 ml-10 mr-10">
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70 hidden md:block">
+            <button class="ab-btn absolute mt-4 hidden md:block">Great Price</button>
+            <img src="images/Volvo.png" alt="Volvo" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Volvo - 2022</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">15 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Petrol</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">Automatic</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$78,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Merceds(SECOND SECTION) -->
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70 hidden md:block">
+            <button class="ab1-btn absolute mt-4 hidden md:block">Sale</button>
+            <img src="images/Audi.png" alt="Audi" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Mercedes - 2023</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">15 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Petrol</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$80,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Audi(THIRD SECTION) -->
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70 hidden md:block">
+            <button class="ab1-btn absolute mt-4 hidden md:block">Low Mileage</button>
+            <img src="images/Audi (2).png" alt="Audi" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Mercedes - 2023</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">15 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Petrol</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$50,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>    
+        <!-- Range(Fourth Section) -->
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70 hidden md:block">
+            <button class="ab1-btn absolute mt-4 hidden md:block">Sale</button>
+            <img src="images/Bently.png" alt="Bently" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Bently - 2025</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">15 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Petrol</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$250,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>   
+    </div>  
+    </div>
+        <div class="flex justify-center gap-5 mt-15">
+           <img src="images/Left-arrow(2).png" alt="Left Arrow">
+           <img src="images/Right-arrow (2).png" alt="">
+        </div>
+    </div>
+
+
+    <!-- Online in-person -->
+    <div class="md:flex mt-20  online-right gap-40">
+        <img src="images/Volvo(2).png" alt="Volvo">
+        <div class="md:py-50 py-15 md:ml-0 md:mr-0 ml-2 mr-2">
+            <h2 class="text-5xl font-bold text-start mb-5">Online, in-person, <br> everywhere</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, ea.<br>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            <button class="online-btn mt-7">Get Started</button>
+        </div>
+    </div>
+
+    <!-- LIST OF SALES, ETC -->
+    <div class="flex justify-around mt-15">
+        <div class="text-center">
+            <h1 class="font-bold text-3xl">836M</h1>
+            <span class="mt-5 uppercase">Cars For Sale</span>
+        </div>
+
+        <div class="text-center">
+            <h1 class="font-bold text-3xl">738M</h1>
+            <span class="mt-5 uppercase">Dealer Reviews</span>
+        </div>
+
+        <div class="text-center">
+            <h1 class="font-bold text-3xl">100M</h1>
+            <span class="mt-5 uppercase">Visitors per day</span>
+        </div>
+        
+        <div class="text-center">
+            <h1 class="font-bold text-3xl">238M</h1>
+            <span class="mt-5 uppercase">Verified dealers</span>
+        </div>
+    </div>
+
+
+    <div class="mt-20  fade-section3">
+        <h1 class="text-3xl font-bold text-center">Upcoming Cars</h1>
+    <!-- Upcoming Cars -->
+    <div class="overflow-x-auto md:flex md:justify-around">
+        <div class="flex justify-around mt-10 gap-10  md:flex-wrap flex-nowrap space-x-4 w-380 md:ml-0 md:mr-0 ml-10 mr-10">
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70 md:block hidden">
+            <img src="images/Range-Rover.png" alt="Range-Rover" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">T-Cross - 2023</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">15 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Petrol</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$15,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Bently(SECOND SECTION) -->
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  md:block hidden">
+            <img src="images/Bently(2).png" alt="Bently" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Bently - 2023</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">350 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Hybrid</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$210,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Audi(THIRD SECTION) -->
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  md:block hidden">
+            <button class="ab-btn absolute mt-4  md:block hidden">Great Price</button>
+            <img src="images/Bently(3).png" alt="Bently" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Bently - 2025</h3>
+            <span class="mt-3">4.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">0 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Petrol</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$250,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div>    
+        <!-- Range(Fourth Section) -->
+        <div class="shadow-xl rounded">
+            <img src="images/Background.png" alt="" class="absolute mt-5 ml-70  md:block hidden">
+            <button class="ab1-btn absolute mt-4  md:block hidden">Low Mileage</button>
+            <img src="images/Nissan.png" alt="Nissan" class="rounded">
+        <div class="ml-4 mr-4 py-5">
+            <h3 class="mt-3 font-semibold">Nissan - 2024</h3>
+            <span class="mt-3">2.0 D5 PowerPulse Momentum 5r AW</span>
+            <hr>
+            <div class="flex justify-between mt-5">
+                <div>
+                    <img src="images/Vector (14).png" alt="Miles">
+                    <span class="mt-2">15 Miles</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (15).png" alt="Miles">
+                    <span class="mt-2">Eletric</span>
+                </div>
+
+                <div>
+                    <img src="images/Vector (16).png" alt="Miles">
+                    <span class="mt-2">CVT</span>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-around mt-5">
+                <h2 class="text-lg font-bold">$38,000</h2>
+                <span class="span text-lg">View Details</span>
+            </div>
+        </div>
+        </div> 
+    </div> 
+    </div>
+
+    <!-- Arrows -->
+    <div class="flex justify-center gap-5 mt-15">
+        <img src="images/Left-arrow(2).png" alt="Left Arrow">
+        <img src="images/Right-arrow (2).png" alt="">
+    </div>
+    </div>
+
+
+    <div class="costumers md:flex md:justify-around py-20 mt-20">
+        <div class="md:ml-0 md:mr-0 ml-2 mr-2">
+            <h2 class="font-bold text-5xl mb-4">What Our <br> Costumers Say</h2>
+            <h2 class="font-bold mt-8 mb-3">Great</h2>
+            <img src="images/Stars.png" alt="Stars" class="mb-4">
+            <span>Based on <strong>5,801 reviews</strong></span>
+        </div>
+
+        <div class="mt-30 md:ml-0 md:mr-0 ml-2 mr-2">
+            <img src="images/Stars.png" alt="Stars">
+            <h1 class="text-lg font-bold">Ali TUFAN</h1>
+            <span>Designer</span>
+            <p class="mt-7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, tempora.<br>Lorem ipsum dolor sit, amet consectetur adipisicing.<br>Lorem, ipsum dolor.</p>
+
+            <div class="mt-10 flex gap-5">
+                <img src="images/Curly.png" alt="Girl">
+                <img src="images/White.png" alt="Guy">
+                <img src="images/Black.png" alt="Guy">
+            </div>
+        </div>
+    </div>
+ 
+
+    <!-- Latest Blog -->
+    <div class="mt-20">
+        <div class="md:flex  justify-around md:ml-0 md:mr-0 ml-2 mr-4">
+            <h1 class="text-3xl font-bold">Latest Blog Posts</h1>
+            <a href="#" class="text-lg">View All</a>
+        </div>
+        <div class="overflow-x-auto md:flex md:justify-around">
+            <div class="flex justify-around mt-10 gap-20 flex-nowrap space-x-4 w-350 md:ml-0 md:mr-0 ml-2 mr-2">
+            <div>
+                <button class="sound-btn absolute mt-5 ml-5 hidden md:block">Sound</button>
+                <img src="images/Volvo(3).png" alt="Volvo" class="mb-3 rounded">
+                <span class="text-md">Admin | November 22, 2023</span>
+                <p class="font-semibold">2024 BMW ALIPNA XB7 with exclusive details, <br> extraordinary</p>
+            </div>
+
+            <div>
+                <button class="sound-btn absolute mt-5 ml-5 hidden md:block">Accessories</button>
+                <img src="images/Bently(4).png" alt="Bently" class="mb-3 rounded">
+                <span class="text-md">Admin | August 22, 2021</span>
+                <p class="font-semibold">2024 BMW ALIPNA XB7 with exclusive details, <br> extraordinary</p>
+            </div>
+
+            <div>
+                <button class="sound-btn absolute mt-5 ml-5 hidden md:block">Exterior</button>
+                <img src="images/Audi-8.png" alt="Audi" class="mb-3 rounded">
+                <span class="text-md">Admin | January 5, 2025</span>
+                <p class="font-semibold">2024 BMW ALIPNA XB7 with exclusive details, <br> extraordinary</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explore Our Premium Brands -->
+    <div class="mt-20 md:ml-0 md:mr-0 ml-2 mr-2">
+        <div class="flex justify-around">
+            <h1 class="text-3xl font-bold">Explore Our Premium Brands </h1>
+            <a href="#" class="text-lg">Show All Brands</a>
+        </div>
+    <div class="overflow-x-auto md:flex md:justify-around">
+        <div class="flex flex-nowrap md:flex-nowrap justify-between space-x-6 md:w-00 mt-10">
+            <img src="images/Audi (3).png" alt="Audi">
+            <img src="images/BMW.png" alt="Bmw">
+            <img src="images/Ford.png" alt="Ford">
+            <img src="images/Mercedes-Benz.png" alt="Mercedes">
+            <img src="images/Peugeot.png" alt="Peugeot">
+            <img src="images/Volswagen.png" alt="Volswagen">
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="contact md:flex md:justify-around py-30 mt-20">
+        <img src="images/Girl-Smiling.png" alt="">
+        <div class="mt-20 md:ml-0 md:mr-0 ml-2 mr-2">
+            <h2 class="font-bold text-5xl mb-4">Have More Questions? Dont <br> Hesitate To Reach Us</h2>
+            <span>123 Queensberry, Street, North</span>
+            <p>Melbourne VIC3051, Australia</p>
+            <div class="flex mt-5 gap-8 md:ml-0 md:mr-0 ml-2 mr-2">
+               <div class="flex justify-around contact1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                  </svg>
+                <h2>+76 845 232 555</h2>                  
+               </div>
+
+               <div class="flex justify-around contact1 md:ml-0 md:mr-0 ml-2 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                  </svg>                  
+                <h2>An2Tech@gmail.com</h2>                  
+               </div>
+            </div>
+            <button class="contact-btn mt-7 md:ml-0 md:mr-0 ml-2 mr-2">Get Started</button>
+        </div> 
+    </div>
+
+    <!-- FOOTER -->
+    <div class="md:flex md:justify-around mt-10 footer md:ml-0 md:mr-0 ml-2 mr-2 text-start">
+    <div class="flex justify-around gap-40">
+        <div class="grid">
+            <h1 class="text-lg font-bold">Company</h1>
+            <a href="#">About Us</a>
+            <a href="#">Blog</a>
+            <a href="#">Services</a>
+            <a href="#">FAQs</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="grid">
+            <h1 class="text-lg font-bold md:mt-0 mt-3">Quick Link</h1>
+            <a href="#">Get In Touch</a>
+            <a href="#">Help Center</a>
+            <a href="#">Live Chat</a>
+            <a href="#">How It Works</a>
+        </div>
+    </div>
+
+    <div class="flex justify-around gap-40">
+        <div class="grid">
+            <h1 class="text-lg font-bold md:mt-0 mt-3">Our Brands</h1>
+            <a href="#">Toyota</a>
+            <a href="#">Porsche</a>
+            <a href="#">Audi</a>
+            <a href="#">BMW</a>
+            <a href="#">Ford</a>
+            <a href="#">Nissan</a>
+            <a href="#">Volswagen</a>
+        </div>
+
+        <div class="grid">
+            <h1 class="text-lg font-bold md:mt-0 mt-3">Our Brands</h1>
+            <a href="#">Sedan</a>
+            <a href="#">Hatchback</a>
+            <a href="#">SUV</a>
+            <a href="#">Truck</a>
+            <a href="#">Eletric</a>
+            <a href="#">Coupe</a>
+            <a href="#">Convertible</a>
+        </div>
+    </div>
+
+        <div class="grid md:mt-0 mt-5 text-center md:text-start">
+            <h1 class="text-lg font-bold">Sale Hours</h1>
+            <span>Monday - Friday, 09:00 AM - 09:00 PM</span>
+            <span>Saturday:09:00 AM - 07:00 PM</span>
+            <span>Sunday Closed</span>
+
+            <h1 class="text-lg font-bold">Connect With Us</h1>
+            <div class="flex gap-5 justify-center md:justify-start">
+                <img src="images/Symbol (1).png" alt="X" class="w-4 h-4">
+                <img src="images/Symbol (2).png" alt="INS" class="w-4 h-4">
+                <img src="images/Symbol (3).png" alt="IN" class="w-4 h-4" >
+                <img src="images/Symbol.png" alt="Facebook" class="w-4 h-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-around mt-20 text-center">
+        <span>&copy;2025 An2Tech.com.All Rights Reserved</span>
+        <span>Terms & Conditions | Privacy Notice</span>
+    </div>
+    
+    
+<script src="main.js"></script>
+</body>
+</html>
